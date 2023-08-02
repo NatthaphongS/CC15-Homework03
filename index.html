@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./nav-styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Home</title>
+    <!-- toggle navbar function -->
+    <script>
+        $(function () {
+            $(".toggle").on("click", function () {
+                if ($(".item").hasClass("active")) {
+                    $(".item").removeClass("active");
+                }
+                else {
+                    $(".item").addClass("active");
+                }
+            })
+        });
+        $(function () {
+            $(".va").on("click", function () {
+                if ($(".hide").hasClass("active")) {
+                    $(".hide").removeClass("active");
+                }
+                else {
+                    $(".hide").addClass("active");
+                }
+            })
+        });
+    </script>
+    <style>
+        .contain1 {
+            position: relative;
+            background-color: rgb(252, 252, 252);
+        }
+        .main1 {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: rgb(252, 252, 252);
+            padding-top: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .main1 .pic {
+            background-color: #eee;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: relative;
+            flex-shrink: 0;
+            margin: 30px;
+        }
+
+        .main1 img {
+            width: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-55%, -50%);
+        }
+
+        .main1 .content {
+            padding: 50px;
+            width: auto;
+            color: #222831;
+            /* min-width: 450px; */
+        }
+
+        .main1 .content p {
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 5px;
+            margin-top: 20px;
+            border: none;
+            background-color: #fccb2b;
+            cursor: pointer;
+            box-shadow: 6px 8px 23px -8px rgba(0,0,0,0.75);
+        }
+
+        /* contain2 */
+        .contain2 {
+            position: relative;
+        }
+
+        .main2 {
+            padding: 10px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        .header2 {
+            /* background-color: #fccb2b; */
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 20px;
+        }
+
+        .header2 p {
+            font-size: 20px;
+            color: #eee;
+            /* font-weight: bold; */
+        }
+
+        .mpost {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .post {
+            background-color: #eee;
+            border-radius: 5px;
+            width: 320px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .hide.active {
+            display: block;
+        }
+
+        .sinfo {
+            font-size: smaller;
+        }
+
+        .va {
+            cursor: pointer;
+            color: #00adb5;
+        }
+
+        .va:hover {
+            text-decoration: underline;
+        }
+
+        /* contain3 */
+        .contain3 {
+            position: relative;
+            background-color: #eee;
+        }
+
+        .main3 {
+            padding: 20px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            width: 700px;
+        }
+
+        .main3>p {
+            font-size: 20px;
+            padding: 10px 0;
+        }
+
+        .picwork {
+            width: 200px;
+            flex-shrink: 0;
+            margin: 0 10px 15px 0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .picwork img {
+            width: 100%;
+        }
+        a>h2{
+            color: #222831;
+            padding: 3px;
+            border-radius: 5px;
+            width: fit-content;
+        }
+        a:hover>h2{
+            background-color: #c2bfbd;
+        }
+        .fwork {
+            border-bottom: 1px solid #a1a1a1;
+            display: flex;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            margin-top: 15px;
+        }
+
+        .year {
+            display: inline-block;
+            background-color: #222831;
+            color: white;
+            padding: 3px 6px;
+            margin: 10px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        p[class=type] {
+            display: inline-block;
+            color: #a1a1a1;
+        }
+
+        footer {
+            background-color: #eee;
+            position: relative;
+            padding: 30px;
+            /* ------------------------- */
+            margin-top: -1px
+            /* little fix for moblie web */
+        }
+
+        .end {
+            /* background-color: #fccb2b; */
+            width: 300px;
+            padding: 20px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .end img {
+            width: 20px;
+            margin: 10px 13px;
+        }
+
+        .end p {
+            font-size: 10px;
+        }
+
+        /* responsive */
+        @media all and (min-width:760px) {
+            .contain2,.contain1 {
+                position: relative;
+            }
+
+            .main2,.main1 {
+                position: relative;
+                left: 50%;
+                transform: translate(-50%);
+                width: 700px;
+            }
+        }
+        @media (max-width:759px){
+            .main1{
+                flex-flow: column nowrap;  
+                align-items: center; 
+                justify-content: flex-start;
+            }
+            .pic{
+                order: -1;
+            }
+            .main1 .content{
+                width: 324px;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+            }
+            .main3{
+                width: 80%;
+            }
+            .main3>p{
+                text-align: center;
+            }
+            .fwork{
+                flex-flow: column nowrap;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding-bottom: 10px;
+            }
+            .picwork{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="navbar">
+            <li class="logo"><img src="./pic/signature.png" alt=""></li>
+            <li class="item"><a href="./index.html">Home</a></li>
+            <li class="item"><a href="./blog.html">Blog</a></li>
+            <li class="item"><a href="./works.html">Works</a></li>
+            <li class="item"><a href="./contact.html">Contact</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+    <div class="contain1">
+        <div class="main1">
+            <div class="content">
+                <h1>Hi, I am Hong,</h1>
+                <h1>Full-stack Developer</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates iure eligendi amet maxime accusamus sit sapiente dicta, quis fugit vero!</p>
+                <button>Download Resume</button>
+            </div>
+            <div class="pic">
+                <img src="./pic/male-programmer-upper-body-svgrepo-com.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="contain2">
+        <div class="main2">
+            <div class="header2">
+                <p>Recent post</p>
+                <span class="va">View all</span>
+            </div>
+            <div class="mpost">
+                <div class="post">
+                    <h3>Making a design system from scratch</h3>
+                    <br>
+                    <p>12 Feb 2020 | design,Pattern</p>
+                    <br>
+                    <p class="sinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolorum laudantium
+                        inventore voluptates quo doloremque temporibus est repudiandae quas ipsum.</p>
+                </div>
+                <div class="post">
+                    <h3>Making a design system from scratch</h3>
+                    <br>
+                    <p>12 Feb 2020 | design,Pattern</p>
+                    <br>
+                    <p class="sinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolorum laudantium
+                        inventore voluptates quo doloremque temporibus est repudiandae quas ipsum.</p>
+                </div>
+                <div class="post hide">
+                    <h3>Making a design system from scratch</h3>
+                    <br>
+                    <p>12 Feb 2020 | design,Pattern</p>
+                    <br>
+                    <p class="sinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolorum laudantium
+                        inventore voluptates quo doloremque temporibus est repudiandae quas ipsum.</p>
+                </div>
+                <div class="post hide">
+                    <h3>Making a design system from scratch</h3>
+                    <br>
+                    <p>12 Feb 2020 | design,Pattern</p>
+                    <br>
+                    <p class="sinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolorum laudantium
+                        inventore voluptates quo doloremque temporibus est repudiandae quas ipsum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contain3">
+        <div class="main3">
+            <p>Featured works</p>
+            <div class="fwork">
+                <div class="picwork">
+                    <img src="./pic/dashboard.jpg" alt="">
+                </div>
+                <div class="cwork">
+                    <a href="./work_detail.html"><h2>Designing Dashboard</h2></a>
+                    <p class="year">2022</p>
+                    <p class="type">Dashboard</p>
+                    <p class="sinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia facilis
+                        iusto dolores cupiditate ipsa impedit recusandae asperiores qui vel atque quisquam doloribus,
+                        dignissimos dolorem.</p>
+                </div>
+            </div>
+            <div class="fwork">
+                <div class="picwork">
+                    <img src="./pic/illustration.jpg" alt="">
+                </div>
+                <div class="cwork">
+                    <a href="./work_detail.html"><h2>Bird Artwork of 2021</h2></a>
+                    <p class="year">2021</p>
+                    <p class="type">Illustration</p>
+                    <p class="sinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia facilis
+                        iusto dolores cupiditate ipsa impedit recusandae asperiores qui vel atque quisquam doloribus,
+                        dignissimos dolorem.</p>
+                </div>
+            </div>
+            <div class="fwork">
+                <div class="picwork">
+                    <img src="./pic/Typography.jpg" alt="">
+                </div>
+                <div class="cwork">
+                    <a href="./work_detail.html"><h2>Content Creative MCSR</h2></a>
+                    <p class="year">2020</p>
+                    <p class="type">Typography</p>
+                    <p class="sinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia facilis
+                        iusto dolores cupiditate ipsa impedit recusandae asperiores qui vel atque quisquam doloribus,
+                        dignissimos dolorem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="end">
+            <div class="icon">
+                <img src="./pic/facebook.png" alt="">
+                <img src="./pic/instagram.png" alt="">
+                <img src="./pic/twitter.png" alt="">
+                <img src="./pic/linkedin.png" alt="">
+            </div>
+            <div class="cr">
+                <p>Copyright &copy;2020 All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

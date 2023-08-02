@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #393e46;
+}
+nav{
+    background-color: #222831;
+    padding: 5px 20px;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    color: #eee;
+    text-decoration: none;
+    padding: 3px;
+    border-radius: 5px;
+}
+li {
+    color: white;
+}
+.item a:hover{
+    background-color: #393e46;
+    transition: all 0.25s;
+}
+.navbar li{
+    font-size: 16px;
+    padding: 5px;
+}
+.navbar li a{
+    display: block;
+}
+.logo img{
+    width: 180px;
+    margin-top: 3px;
+    margin-left: -20px;
+}
+
+/* mobile menu */
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle{
+    margin-top: -10px;
+    order: 1;
+}
+.item{
+    width: 100%;
+    text-align: center;
+    order: 2;
+    display: none;
+}
+.item.active{
+    display: block;
+}
+.toggle{
+    cursor: pointer;
+}
+.bars{
+    background-color: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+}
+.bars::before,.bars::after{
+    background-color: #999;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 18px;
+}
+.bars::after{
+    top: -5px;
+}
+.bars::before{
+    top: 5px;
+}
+
+/* tablet menu */
+@media all and (min-width:759px){
+    .navbar{
+        justify-content: flex-end;
+    }
+    .logo{
+        flex: 1;
+    }
+    .item{
+        display: block;
+        width: auto;
+    }
+    .toggle{
+        display: none;
+    }
+    .navbar li{
+        padding: 1px 5px;
+    }
+}

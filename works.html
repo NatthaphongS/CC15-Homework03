@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./nav-styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Works</title>
+    <!-- toggle navbar function -->
+    <script>
+        $(function() {
+            $(".toggle").on("click",function(){
+                if($(".item").hasClass("active")){
+                    $(".item").removeClass("active");
+                }
+                else{
+                    $(".item").addClass("active");
+                }
+            })
+        });
+    </script>
+    <style>
+        .contain3 {
+            position: relative;
+            background-color: #eee;
+        }
+
+        .main3 {
+            padding: 20px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            width: 700px;
+        }
+
+        .main3>h1{
+            padding: 10px 0;
+        }
+
+        .picwork {
+            width: 250px;
+            height: fit-content;
+            flex-shrink: 0;
+            margin: 0 10px 15px 0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .picwork img {
+            width: 100%;
+        }
+        a>h2{
+            color: #222831;
+            padding: 3px;
+            border-radius: 5px;
+            width: fit-content;
+        }
+        a:hover>h2{
+            background-color: #c2bfbd;
+        }
+        .fwork {
+            border-bottom: 1px solid #a1a1a1;
+            display: flex;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            margin-top: 15px;
+        }
+        .sinfo{
+            margin-bottom: 10px;
+        }
+        .year {
+            display: inline-block;
+            background-color: #222831;
+            color: white;
+            padding: 3px 6px;
+            margin: 10px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        p[class=type] {
+            display: inline-block;
+            color: #a1a1a1;
+        }
+        footer {
+            background-color: #eee;
+            position: relative;
+            padding: 30px;
+        }
+        .end {
+            /* background-color: #fccb2b; */
+            width: 300px;
+            padding: 20px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .end img {
+            width: 20px;
+            margin: 10px 13px;
+        }
+
+        .end p {
+            font-size: 10px;
+        }
+        @media (max-width:759px){
+            .main3{
+                width: 80%;
+            }
+            .main3>p{
+                text-align: center;
+            }
+            .fwork{
+                flex-flow: column nowrap;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding-bottom: 10px;
+            }
+            .picwork{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="navbar">
+            <li class="logo"><img src="./pic/signature.png" alt=""></li>
+            <li class="item"><a href="./index.html">Home</a></li>
+            <li class="item"><a href="./blog.html">Blog</a></li>
+            <li class="item"><a href="./works.html">Works</a></li>
+            <li class="item"><a href="./contact.html">Contact</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="contain3">
+            <div class="main3">
+                <h1>Work</h1>
+                <div class="fwork">
+                    <div class="picwork">
+                        <img src="./pic/dashboard.jpg" alt="">
+                    </div>
+                    <div class="cwork">
+                        <a href="./work_detail.html"><h2>Designing Dashboard</h2></a>
+                        <p class="year">2022</p>
+                        <p class="type">Dashboard</p>
+                        <p class="sinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia facilis
+                            iusto dolores cupiditate ipsa impedit recusandae asperiores qui vel atque quisquam doloribus,
+                            dignissimos dolorem.</p>
+                    </div>
+                </div>
+                <div class="fwork">
+                    <div class="picwork">
+                        <img src="./pic/illustration.jpg" alt="">
+                    </div>
+                    <div class="cwork">
+                        <a href="./work_detail.html"><h2>Bird Artwork of 2021</h2></a>
+                        <p class="year">2021</p>
+                        <p class="type">Illustration</p>
+                        <p class="sinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia facilis
+                            iusto dolores cupiditate ipsa impedit recusandae asperiores qui vel atque quisquam doloribus,
+                            dignissimos dolorem.</p>
+                    </div>
+                </div>
+                <div class="fwork">
+                    <div class="picwork">
+                        <img src="./pic/Typography.jpg" alt="">
+                    </div>
+                    <div class="cwork">
+                        <a href="./work_detail.html"><h2>Content Creative MCSR</h2></a>
+                        <p class="year">2020</p>
+                        <p class="type">Typography</p>
+                        <p class="sinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia facilis
+                            iusto dolores cupiditate ipsa impedit recusandae asperiores qui vel atque quisquam doloribus,
+                            dignissimos dolorem.</p>
+                    </div>
+                </div>
+                <div class="fwork">
+                    <div class="picwork">
+                        <img src="./pic/Component.jpg" alt="">
+                    </div>
+                    <div class="cwork">
+                       <a href="./work_detail.html"><h2>Layout Design</h2></a>
+                        <p class="year">2019</p>
+                        <p class="type">Component,Design</p>
+                        <p class="sinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia facilis
+                            iusto dolores cupiditate ipsa impedit recusandae asperiores qui vel atque quisquam doloribus,
+                            dignissimos dolorem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="end">
+                <div class="icon">
+                    <img src="./pic/facebook.png" alt="">
+                    <img src="./pic/instagram.png" alt="">
+                    <img src="./pic/twitter.png" alt="">
+                    <img src="./pic/linkedin.png" alt="">
+                </div>
+                <div class="cr">
+                    <p>Copyright &copy;2020 All rights reserved</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
